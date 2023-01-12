@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Plane Crash Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="http://localhost:7000/Picture/slideshow1.jpg" class="slide-size">
+      <div class="slide-text">Jeff and Sharif's Plane Crash Website</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="http://localhost:7000/Picture/slideshow2.jpg" class="slide-size">
+      <div class="slide-text">Jeff and Sharif's Plane Crash Website</div>
+    </div>
+        
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="http://localhost:7000/Picture/slideshow3.jpg" class="slide-size">
+      <div class="slide-text">Jeff and Sharif's Plane Crash Website</div>
+    </div>
+        
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="http://localhost:7000/Picture/slideshow4.jpg" class="slide-size">
+      <div class="slide-text">Jeff and Sharif's Plane Crash Website</div>
+    </div>
+
+    </div>
+
+    
+    <br>
+        
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+        
+    <script>
+    let slideIndex = 0;
+    showSlides();
+        
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 7000); // Change image every 7 seconds
+    }
+    </script>
+    
+<header class="main-header">
+
+  <nav class="nav-bar">
+    <br>
+    <ul>
+      <li><a href="./index.html" class="active">Home</a></li>
+      <li><a href="./database.html" class="active">Crash Database</a></li>
+      <li><a onclick="myFunction()">Toggle Dark Mode</a></li>
+
+
+    </ul>
+  </nav>
+  <br>
+  
+</header>
+
+
+<div class="row">
+  <div class="side">
+    <h2>Photos of us:</h2>
+    <img src="./Picture/Sharif.jpg" style="width:200px;">
+    <img src="./Picture/Jeff.jpg" style="width:200px;">
+
+
+    <h2>About Us</h2>
+    <img src="http://localhost:7000/Picture/MUN.jpg" style="width:300px;height:200px;">
+    <p>We are Jeff and Sharif, we are group 29 of the Comp 3100 course. Our goal was to implement a well organized Airplane crash database to spread infomation and to be able to easily naviage through our website.</p>
+    <h3>Below is a CNN video of 911</h3>
+    <p></p>
+    
+    <iframe width="360" height="250" src="https://www.youtube.com/embed/sBciZFE8lAw">
+    </iframe>
+
+    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);
+      " width="360" height="350" src="https://charts.mongodb.com/charts-mun-work-ubpis/embed/charts?id=6230feb3-166f-4188-817b-51302e4acb00&maxDataAge=3600&theme=light&autoRefresh=false">
+    </iframe>
+  </div>
+
+  <div class="main">
+    
+    <script>
+    </script>
+
+    <h2>Near Sihanoukville, Cambodia</h2>
+    <h5>Title description, June 25th, 2007</h5>
+    <img src="http://localhost:7000/Picture/plane.jpg" style="width:200px;">
+    
+    <p>Aboard: 22,
+        Fatalities: 22</p>
+        <p>The aircraft crashed into Phnom Damrey Mountain at an elevation of 1,640 feet, about 5 minutes from its destination of Sihanoukville.</p>
+        <a href="map3.html"  class="map-link">View Map of Cambodia</a>
+    <br>
+
+    <h2>This is New York City on 911</h2>
+    <h5>Title description, Sep 11, 2001</h5>
+    <img src="http://localhost:7000/Picture/911.jpg" style="width:200px;">
+    <p> Aboard: 92,
+        Fatalities: 92</p>
+        <p>The aircraft was hijacked shortly after it left Logan International Airport in Boston. The hijackers took control of the aircraft and deliberately crashed it into the north tower of the World Trade Center between the 94th and 99th floors at approximately 450 mph.  After 102 minutes, the building collapsed. It was one of four planes that were hijacked the same day.</p>
+    <a href="map1.html"  class="map-link">View Map of New York</a>
+    <br>
+
+    <h2>This is Huntsville, Texas</h2>
+    <h5>Title description, June 8th, 2008</h5>
+    <img src="http://localhost:7000/Picture/Huntville.jpg" style="width:200px;">
+    <p> Aboard: 4,
+        Fatalities: 4</p>
+        <p> The medical helicopter crashed into the Sam Houston National Forest while transporting a patient to a Houston hospital. The pilot's failure to identify and arrest the helicopter's descent, which resulted in its impact with terrain. Contributing to the accident was the pilot's inadvertent flight into instrument meteorological conditions, and the limited outside visual reference due to the dark night conditions, low clouds, and fog.</p>
+    <a href="map2.html"  class="map-link">View Map of Huntsville</a>
+  </div>
+</div>
+</body>
+
+<script src="./js/dark-mode.js"></script>
+
+<footer>
+  <div id="disqus_thread"></div>
+  
+  
+  <script>
+    /*comment section*/
+      var disqus_config = function () {
+      this.page.url = test.com;  
+      this.page.identifier = 12344567899999; 
+      };
+      
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://plane-crash.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+
+
+  <div class="footer">
+    <h2>© Jeff and Sharif Airplane Crash Database</h2>
+  </div>
+</footer>
+
+</html>

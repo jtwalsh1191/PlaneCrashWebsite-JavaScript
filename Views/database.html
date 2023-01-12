@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Our database</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<header class="main-header">
+
+	<nav class="nav-bar">
+	  <br>
+	  <ul>
+		<li><a href="./index.html" class="active">Home</a></li>
+		<li><a href="./database.html" class="active">Crash Database</a></li>
+		<li><a onclick="myFunction()">Toggle Dark Mode</a></li>
+	  </ul>
+	</nav>
+	<br>
+	
+  </header>
+
+<br>
+
+<body>
+	<section > 
+
+	<div>
+		<label class="labeldb">Show entire database:</label>
+		<button class="database_buttons" id="btn-list-all" type="button">Show Database</button>	
+	</div>
+	<br>
+	<div>
+		<label class="labeldb">Sort Database By fatalities:</label>
+		<button class="database_buttons" id="btn-list-fatGL" >Greatest to Least</button>
+		<button class="database_buttons" id="btn-list-fatLG" >Least to Greatest</button>
+	</div>
+<br>
+	<div>
+		<label class="labeldb">Sort Database By aboard:</label>
+		<button class="database_buttons" id="btn-list-aboGL" >Greatest to Least</button>
+		<button class="database_buttons" id="btn-list-aboLG" >Least to Greatest</button>
+	</div>
+<br>
+	<div>
+		<label class="labeldb">Top 2 crashes with highest fatalities:</label>
+		<button class="database_buttons" id="btn-list-top" >show</button>
+
+	</div>
+
+</section>
+<br>
+<br>
+<div id="list-crashes"></div>
+
+</body>
+<script src="./js/list.js"></script> 
+<script src="./js/dark-mode.js"></script>
+</html>

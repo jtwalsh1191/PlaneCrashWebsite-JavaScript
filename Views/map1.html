@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/dark-mode.js"></script>
+  </head>
+
+  <header class="main-header">
+
+    <nav class="nav-bar">
+      <br>
+      <ul>
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./database.html" class="active">Crash Database</a></li>
+        <li><a onclick="myFunction()">Toggle Dark Mode</a></li>
+  
+  
+      </ul>
+    </nav>
+    <br>
+    
+  </header>
+
+<body>
+
+<h1>New York City, New York. The site of 911</h1>
+
+<div id="googleMap" style="width:50%;height:200px; zoom: 3"></div>
+
+<script>
+
+
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(40.7128,-74.0060),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKVFv-frYlvUTjZUeKXU45o_R-aKd5mKQ&callback=myMap"></script>
+
+</body>
+</html>
